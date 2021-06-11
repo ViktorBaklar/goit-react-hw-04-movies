@@ -13,22 +13,25 @@ class SearchForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.onSubmit(this.state.query);
+    this.setState({ query: '' });
   }
 
   render() {
     return (
-      <form action="" onSubmit={this.handleSubmit} className={style.searchForm}
-      >
-        <input
-          className={style.searchFormInput}
-          type="text"
-          value={this.state.query}
-          onChange={this.handleChange}
-        />
-        <button type="submit" className={style.searchBtn}>
-          <span className={style.searchBtnLabel}>Search</span>
-        </button>
-      </form>
+      <div className={style.searchbar}>
+        <form action="" onSubmit={this.handleSubmit} className={style.searchForm}
+        >
+          <input
+            className={style.searchFormInput}
+            type="text"
+            value={this.state.query}
+            onChange={this.handleChange}
+          />
+          <button type="submit" className={style.searchBtn}>
+            <span className={style.searchBtnLabel}>Search</span>
+          </button>
+        </form>
+      </div>
     );
   }
 }

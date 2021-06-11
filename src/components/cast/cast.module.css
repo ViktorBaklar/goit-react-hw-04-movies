@@ -1,0 +1,12 @@
+.castList {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 24px;
+  list-style: none;
+}
+
+.castList img {
+  width: 200px;
+  height: 300px;
+}
